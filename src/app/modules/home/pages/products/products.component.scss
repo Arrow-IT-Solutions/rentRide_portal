@@ -1,0 +1,60 @@
+@import "../../../../../assets/scss/varialbles.scss";
+
+
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 1rem;
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        background-color: $white-color;
+        border-radius: 10px;
+        box-shadow: $shadow-style;
+        padding: .5rem 1rem;
+        margin: 0.5rem;
+        cursor: pointer;
+        transition: .2s;
+        border: 1px solid $white-color;
+        width: 100%;
+        align-items: center;
+
+        &:hover, &.active{
+            border: 1px solid $primary-color;
+        }
+    }
+
+    &__image{
+        width: 115px;
+        height: 115px;
+        border-radius: 50%;
+        clip-path: circle(50% at 50% 50%);
+        position: relative;
+
+        & img{
+            width: fit-content;
+            height: 100%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__title{
+        margin: .75rem 0.25rem 0rem 0;
+        font-family: myfont-semibold;
+        text-align: center;
+        height: 30px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__price{
+        color: $blue-color;
+        text-align: center;
+        margin-top: 1rem;
+        font-family: myfont-semibold;
+    }
+}

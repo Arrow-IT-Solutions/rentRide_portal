@@ -1,0 +1,120 @@
+<form>
+    <div class="add-product">
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="col-12 side-icon">
+            <span class="material-symbols-outlined"> info </span>
+            <span>Basic Info</span>
+          </div>
+          <div class="col-12 row m-0 p-0">
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <input pInputText type="text" />
+                <label>Name Ar</label>
+
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <input pInputText type="text"/>
+                <label>Name En</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="col-12 side-icon">
+            <span class="material-symbols-outlined"> fastfood </span>
+            <span>Products Info</span>
+          </div>
+          <div class="col-12 row m-0 p-0">
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <p-dropdown></p-dropdown>
+                <label>Category</label>
+              </div>
+            </div>
+              <div class="col-12 mb-3">
+                <div class="p-float-label counter-control">
+                    <p-inputNumber 
+                    [showButtons]="true" 
+                    buttonLayout="horizontal" 
+                    inputId="horizontal" 
+                    spinnerMode="horizontal" 
+                    [step]="0.25"
+                    decrementButtonClass="p-button-danger"
+                    incrementButtonClass="p-button-success"
+                    incrementButtonIcon="pi pi-plus" 
+                    decrementButtonIcon="pi pi-minus" 
+                    mode="currency" 
+                    currency="RAS" />
+                  <label>Price</label>
+                </div>
+              </div>
+              <div class="col-12 mb-3">
+                <div class="p-float-label counter-control">
+                    <p-inputNumber 
+                    [showButtons]="true" 
+                    buttonLayout="horizontal" 
+                    inputId="horizontal" 
+                    spinnerMode="horizontal" 
+                    [step]="0.25"
+                    decrementButtonClass="p-button-danger"
+                    incrementButtonClass="p-button-success"
+                    incrementButtonIcon="pi pi-plus" 
+                    decrementButtonIcon="pi pi-minus"  />
+                  <label>Quantity</label>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="side-icon col-12">
+            <span class="material-symbols-outlined"> edit_note </span>
+            <span>Notes</span>
+          </div>
+          <div class="col-12">
+            <div class="col p-float-label p-0 mb-3">
+              <textarea
+                rows="3"
+                pInputTextarea
+              ></textarea>
+              <label></label>
+            </div>
+            <div class="col p-float-label p-0">
+              <textarea
+                rows="3"
+                pInputTextarea
+              ></textarea>
+              <label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="side-icon col-12">
+            <span class="material-symbols-outlined"> check_circle </span>
+            <span>Status</span>
+          </div>
+          <div class="col-12 switch-button">
+            <p-inputSwitch></p-inputSwitch>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-xs-12 text-end mt-4">
+        <p-button
+          type="Submit"
+          class="btn-primary"
+        >Submit</p-button>
+      </div>
+    </div>
+  </form>  

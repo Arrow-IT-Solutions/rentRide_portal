@@ -1,0 +1,276 @@
+@import "../../../../../assets/scss/varialbles.scss";
+
+.roles {
+    padding: 1rem 1rem 1rem 0rem;
+    position: relative;
+    margin-inline-start: -1rem;
+
+    &:lang(ar){
+        padding: 1rem 0 1rem 1rem;
+      }
+
+      ::ng-deep .p-accordion {
+        & .p-accordion-header {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: -3rem;
+    
+          &:lang(ar) {
+            right: unset;
+            left: 2rem;
+            direction: ltr;
+            position: absolute;
+            top: 4rem;
+          }
+    
+          & .p-accordion-header-link {
+            padding: 0.5rem 0.75rem;
+            border-radius: 6px;
+            background-color: $white-color;
+            border-color: $light-gray;
+            top: 1px;
+            color: $primary-color;
+            right: 0.75rem;
+    
+            & chevronrighticon,
+            & chevrondownicon {
+              display: none;
+            }
+    
+            &:lang(ar){
+              top: 0;
+              right: 0;
+            }
+          }
+        }
+    
+        & .p-accordion-content {
+          border-radius: 6px;
+          position: relative;
+          top: 0.75rem;
+          padding: 0 0rem 0.75rem;
+          border: none;
+          border: 1px solid $lighter-gray;
+          margin: 0.5rem .75rem 0.5rem 0;
+        }
+      }
+    
+      & .filter-title{
+        display: flex;
+        align-items: center;
+        border-inline-end: 1px solid rgba($light-purple, .5);
+        margin-top: 0.75rem;
+        width: 12%;
+        justify-content: space-evenly;
+    
+        & .material-symbols-outlined{
+          color: $blue-color;
+          top: 0;
+        }
+      }
+    
+      & .filter-field{
+        display: flex;
+    
+        & label{
+          display: flex;
+          align-items: center;
+          margin-inline-end: .5rem;
+        }
+    
+        & p-dropdown, & p-calendar{
+          flex-grow: 2;
+        }
+      }
+    
+      &__search {
+        margin-inline-end: 4.5rem;
+    
+        & .search-field{
+          border-color: $light-gray;
+        }
+      }
+    
+      &__tabView {
+        position: relative;
+        top: -1rem;
+        max-width: 100%;
+    
+        @media (min-width: 992px) {
+          position: absolute;
+          top: 0.8rem; // Desktops and large screens
+        }
+    
+        & ::ng-deep .p-tabview-nav{
+          padding-inline-start: 0;
+          padding-inline-end: 2.5rem;
+        }
+    
+        & ::ng-deep .p-tabview .p-tabview-nav-btn.p-link{
+          background-color: $lighter-gray-2;
+          color: $primary-color;
+          box-shadow: unset;
+          top: -5px;
+        }
+      }
+
+      & .card {
+        background-color: $white-color;
+        border-radius: 6px;
+        border-color: rgba($light-purple, .5);
+        // text-align: center;
+        position: relative;
+    
+        &__edit{
+          position: absolute;
+          right: 1rem;
+          top: 1rem;
+          z-index: 1;
+          transition: .2s;
+          opacity: 0;
+          cursor: pointer;
+    
+          & .material-symbols-outlined{
+            color: $blue-color;
+          }
+    
+          &:lang(ar){
+            right: unset;
+            left: 1rem;
+          }
+        }
+    
+        &__header {
+          background-color: $light-blue;
+          height: 6px;
+          border-radius:6px 6px 0px 0px;
+          background-color: $blue-color;
+    
+          &--title {
+            color: $black-color;
+            font-size: $large-font;
+            font-family: myfont-bold;
+            padding: 0 1rem;
+    
+            & .material-symbols-outlined {
+              top: -3px;
+              width: 50px;
+              height: 50px;
+              text-align: center;
+              border-radius: 50%;
+              background-color: rgba($light-purple, .3);
+              line-height: 50px;
+              margin-inline-end: .5rem;
+              color: $purple-color;
+            }
+          }
+    
+          &--status {
+            font-size: 10px;
+            background-color: $green-color;
+            padding: 0.25rem 0.5rem;
+            text-align: center;
+            width: fit-content;
+            border-radius: 20px;
+            color: $white-color;
+            // margin: auto;
+          }
+    
+          &--active {
+            background-color: $green-color;
+          }
+    
+          &--inactive {
+            background-color: $light-gray;
+          }
+        }
+    
+        &__content {
+    
+          & .material-symbols-outlined {
+            color: $blue-color;
+            font-size: $medium-icon;
+            top: 5px;
+          }
+    
+          &--info {
+            color: $secondary-color;
+            background-color: $lighter-gray-2;
+            border-top: 1px solid $lighter-gray;
+            padding: .5rem 1rem;
+            border-radius: 0 0 6px 6px;
+    
+            & .material-symbols-outlined{
+              text-decoration: none;
+              margin-inline-end: .25rem;
+            }
+    
+    
+            & .blue{
+              font-size: $large-font;
+              text-decoration: underline;
+              cursor: pointer;
+              transition: .2s;
+    
+              &:hover{
+                opacity: .6;
+              }
+            }
+          }
+        }
+    
+        &__actions {
+          padding: 0rem 1.5rem;
+          display: flex;
+    
+          &--edit {
+            flex: auto;
+            color: $white-color;
+            background-color: $secondary-color;
+            border-radius: 10px;
+            border: none;
+            margin-inline-end: 0.7rem;
+          }
+    
+          &--delete {
+            flex: initial;
+            background-color: $white-color;
+            color: $secondary-color;
+            font-size: $large-icon;
+            border-radius: 10px;
+            border: 1px solid $secondary-color;
+            width: 45px;
+            height: 40px;
+          }
+        }
+    
+        &:hover{
+          & .card__edit{
+            opacity: 1;
+          }
+        }
+      }
+
+      & .add-button {
+        width: 60px;
+        height: 60px;
+        font-size: $large-icon;
+        border-radius: 50%;
+        color: $white-color;
+        border: none;
+        position: fixed;
+        top: calc(100vh - 85px);
+        right: 1.5rem;
+        background-color: $primary-color;
+        transition: .2s;
+    
+        &:lang(ar){
+          right: unset;
+          left: 1.5rem;
+        }
+
+        &:hover{
+            opacity: .6;
+        }
+      }
+}

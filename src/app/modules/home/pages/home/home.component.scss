@@ -1,0 +1,22 @@
+@import "../../../../../assets/scss/varialbles.scss";
+
+.home{
+    padding: 0rem;
+
+    // & .invoice-area{
+    //     overflow: auto;
+    //     height: 90vh;
+    // }
+
+    & .products-section{
+        height: 79vh;
+        overflow: auto;
+    }
+}
+
+//responsive
+@media screen and (max-width: 768px) {
+    .invoice-area{
+        display: none;
+    }
+}

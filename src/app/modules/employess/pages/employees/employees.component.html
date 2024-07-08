@@ -1,0 +1,131 @@
+<form class="employees">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="row mb-4 m-0 flex-row-reverse p-0">
+          <div
+            class="col-lg-3 col-md-6 col-xs-6 col-6 p-0 employees__search"
+          >
+            <div class="flex flex-wrap justify-content-center gap-3">
+              <span class="p-input-icon-left">
+                <i class="pi pi-search"></i>
+                <input
+                  class="search-field"
+                  type="text"
+                  pInputText
+
+                  placeholder="Search User"
+                />
+              </span>
+            </div>
+          </div>
+          <p-accordion class="p-0">
+            <p-accordionTab>
+              <ng-template pTemplate="header">
+                <div class="flex align-items-center">
+                    <span class="material-symbols-outlined">tune</span>
+                </div>
+              </ng-template>
+              <ng-template pTemplate="content">
+                <div class="m-0 row">
+                  <div class="filter-title">
+                    <span class="material-symbols-outlined">filter_alt</span>
+                    <span>Filter By</span>
+                  </div>
+                  <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mt-3">
+                    <div class="filter-field">
+                      <label>Role</label>
+                      <!-- <p-dropdown></p-dropdown> -->
+                      <input
+                        type="text"
+                        pInputText
+                      />
+                    </div>
+                  </div>
+                  <div class="col mt-3 text-end">
+                    <p-button
+                      class="btn-outline-secondary"
+                    >
+                      <span class="material-symbols-outlined">restart_alt</span>
+                    </p-button>
+                  </div>
+                </div>
+              </ng-template>
+            </p-accordionTab>
+          </p-accordion>
+        </div>
+        <div class="row employees__tabView">
+          <p-tabView [scrollable]="true">
+            <p-tabPanel>
+              <ng-template pTemplate="header">
+                <span>All</span>
+                <span class="counter">12</span>
+              </ng-template>
+              <p></p>
+            </p-tabPanel>
+          </p-tabView>
+        </div>
+        <ng-container>
+          <div class="row">
+            <div
+              class="col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4"
+            >
+              <div class="user-card">
+                <div class="user-card__header"></div>
+                <div class="user-card__edit">
+                  <span
+                    class="material-symbols-outlined"
+                    >border_color</span
+                  >
+                </div>
+                <div class="user-card__image">
+                    <img src="../../../../../assets/images/user-img.jpg" class="user-card__header--img"/>
+  
+                    <!-- <div class="user-card__header--char-img">AB</div> -->
+                </div>
+                
+  
+                <div class="d-inline-block name-role">
+                  <div class="user-card__header--name">Anas Ali</div>
+                  <span class="user-card__header--role">
+                    <span class="material-symbols-outlined fill">person</span>
+                    Role 1
+                  </span>
+                </div>
+                <div class="user-card__content">
+                  <div class="user-card__content--info">
+                    <span class="material-symbols-outlined">email</span>
+                    a.ali@company.com
+                  </div>
+                  <div class="user-card__content--info">
+                    <span class="material-symbols-outlined">phone</span
+                    >00962778221122
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </ng-container>
+      </div>
+      <!-- <p-paginator
+        [first]="paginationInfo.first ?? 0"
+        [rows]="paginationInfo.rows ?? 12"
+        (onPageChange)="onPageChange($event)"
+        [totalRecords]="paginationInfo.pageCount ?? 12"
+        [rowsPerPageOptions]="[5, 12, 20, 30]"
+      ></p-paginator> -->
+    </div>
+    <button class="add-button">
+      <span class="material-symbols-outlined"> add </span>
+    </button>
+  </form>
+    
+  <ng-template #ListView>
+    <div class="row">
+      <div
+        class="box-shadow col-lg-3 col-md-6 col-sm-6 col-xs-12 mb-4"
+      >
+      </div>
+    </div>
+  </ng-template>
+  

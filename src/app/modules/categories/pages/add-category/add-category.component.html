@@ -1,0 +1,89 @@
+<form>
+    <div class="add-category">
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="col-12 side-icon">
+            <span class="material-symbols-outlined"> info </span>
+            <span>Basic Info</span>
+          </div>
+          <div class="col-12 row m-0 p-0">
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <input pInputText type="text" />
+                <label>Name Ar</label>
+
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <input pInputText type="text"/>
+                <label>Name En</label>
+              </div>
+            </div>
+            <div class="col-12 mb-3">
+              <div class="p-float-label">
+                <p-dropdown></p-dropdown>
+                <label>Icon</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="side-icon col-12">
+            <span class="material-symbols-outlined"> add_photo_alternate </span>
+            <span>Upload Category Icon</span>
+          </div>
+          <div class="col-12">
+            <app-img-control>
+          </app-img-control>
+          </div>
+        </div>
+      </div>
+  
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="side-icon col-12">
+            <span class="material-symbols-outlined"> edit_note </span>
+            <span>Notes</span>
+          </div>
+          <div class="col-12">
+            <div class="col p-float-label p-0 mb-3">
+              <textarea
+                rows="3"
+                pInputTextarea
+              ></textarea>
+              <label></label>
+            </div>
+            <div class="col p-float-label p-0">
+              <textarea
+                rows="3"
+                pInputTextarea
+              ></textarea>
+              <label></label>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <div class="box-shadow mb-3">
+        <div class="row">
+          <div class="side-icon col-12">
+            <span class="material-symbols-outlined"> check_circle </span>
+            <span>Status</span>
+          </div>
+          <div class="col-12 switch-button">
+            <p-inputSwitch></p-inputSwitch>
+          </div>
+        </div>
+      </div>
+  
+      <div class="col-xs-12 text-end mt-4">
+        <p-button
+          type="Submit"
+          class="btn-primary"
+        ></p-button>
+      </div>
+    </div>
+  </form>  

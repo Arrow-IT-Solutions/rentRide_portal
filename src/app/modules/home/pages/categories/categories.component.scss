@@ -1,0 +1,49 @@
+@import "../../../../../assets/scss/varialbles.scss";
+
+.categories{
+    display: flex;
+    padding: 1.5rem 1rem 0;
+    overflow: auto;
+
+    &::-webkit-scrollbar {
+        display: none;
+      }
+
+    &__item{
+        display: flex;
+        flex-direction: column;
+        background-color: $white-color;
+        border-radius: 10px;
+        box-shadow: $shadow-style;
+        padding: .5rem 1rem;
+        margin-inline-end: 1rem;
+        cursor: pointer;
+        transition: .2s;
+        border: 1px solid $white-color;
+
+        &:hover, &.active{
+            border: 1px solid $primary-color;
+            background-color: rgba($primary-color, .15);
+        }
+    }
+
+    &__icon{
+        color: $primary-color;
+    }
+
+    & img{
+        width: 22px;
+        position: relative;
+        top: 5px;
+    }
+
+    &__title{
+        margin: .75rem 0.25rem 0rem 0;
+        font-family: myfont-semibold;
+    }
+
+    &__count{
+        font-size: $small-font;
+        color: $light-gray;
+    }
+}

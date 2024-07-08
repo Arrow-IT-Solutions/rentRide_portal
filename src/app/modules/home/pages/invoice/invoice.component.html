@@ -1,0 +1,110 @@
+<div class="invoice">
+    <div class="invoice__header">
+        <div class="invoice__title">
+            Invoice
+        </div>
+        <div class="invoice__tools">
+            <div class="add-customer">
+                <span class="material-symbols-outlined">person_add</span>
+                Add Customer
+            </div>
+            <div class="separator"></div>
+            <div class="clear-all">
+                <span class="material-symbols-outlined">clear_all</span>
+                Clear Order
+            </div>
+        </div>
+    </div>
+    <div class="invoice__contents p-3">
+        <div class="invoice__items">
+            <p-panel [toggleable]="true" class="mb-2 d-block">
+                <ng-template pTemplate="header">
+                    <span class="material-symbols-outlined meal-delete">close</span>
+                    <div class="meal-info">
+                        <div class="meal-name">
+                        Meal Name
+                        <span class="meal-quantity">X1</span>
+                        </div>
+                        <div class="meal-price">24.00 RAS</div>
+                    </div>
+                    <div class="toggle-btn">
+                        <span class="material-symbols-outlined">keyboard_arrow_down</span>
+                    </div>               
+                </ng-template>
+                <div class="row m-0">
+                    <div class="col-lg-6 col-md-12 order-quantity">
+                        <div class="counter-control">
+                            <label>Quantity</label>
+                            <p-inputNumber 
+                            [showButtons]="true" 
+                            buttonLayout="horizontal" 
+                            inputId="horizontal" 
+                            spinnerMode="horizontal" 
+                            [step]="0.25"
+                            decrementButtonClass="p-button-danger"
+                            incrementButtonClass="p-button-success"
+                            incrementButtonIcon="pi pi-plus" 
+                            decrementButtonIcon="pi pi-minus" 
+                            mode="currency" 
+                            currency="RAS" />
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12 order-sale">
+                        <div class="counter-control">
+                            <label>Discount</label>
+                            <p-inputNumber 
+                            [showButtons]="true" 
+                            buttonLayout="horizontal" 
+                            inputId="horizontal" 
+                            spinnerMode="horizontal" 
+                            [step]="0.25"
+                            decrementButtonClass="p-button-danger"
+                            incrementButtonClass="p-button-success"
+                            incrementButtonIcon="pi pi-plus" 
+                            decrementButtonIcon="pi pi-minus" 
+                            mode="currency" 
+                            currency="RAS" />
+                          
+                        </div>
+                    </div>
+                </div>
+            </p-panel>
+        </div>
+        
+        
+        <div class="invoice__info">
+            <div class="invoice__options d-flex">
+                <span class="material-symbols-outlined">percent</span><span class="btn-link">Discount</span>
+                <div class="separator"></div>
+                <img src="../../../../../assets/images/POS/coupon.svg"><span class="btn-link">Coupon Code</span>
+                <div class="separator"></div>
+                <span class="material-symbols-outlined">edit_note</span><span class="btn-link">Notes</span>
+            </div>
+            <div class="invoice__price">
+                <div class="invoice__price__row">
+                    <div class="price__label">Subtotal</div>
+                    <div class="price__info">72.00 RAS</div>
+                </div>
+                <div class="invoice__price__row">
+                    <div class="price__label">Tax 10%</div>
+                    <div class="price__info">7.20 RAS</div>
+                </div>
+                <div class="invoice__price__row">
+                    <div class="price__label">Discount</div>
+                    <div class="price__info">0.00</div>
+                </div>
+                <div class="horizontal-separator mb-3"></div>
+                <div class="invoice__price__row">
+                    <div class="price__label">Net Total</div>
+                    <div class="price__info">79.20 RAS</div>
+                </div>
+            </div>
+            <div class="invoice__actions">
+                <p-button type="Submit" class="btn-sec-2"><span class="material-symbols-outlined fill">pause</span>Hold Order</p-button>
+                <p-button type="Submit" class="btn-primary"><span class="material-symbols-outlined fill">arrow_forward</span>Proceed</p-button>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>

@@ -1,0 +1,29 @@
+<div class="main-menu">
+  <div *ngFor="let data of navData">
+    <nav [ngClass]="getClassNoItemClass(data)" class="main-menu__item" [routerLink]="data.items == null ? [data.routeLink] : null">
+      <div>
+        <div
+          data-bs-toggle="collapse"
+          [attr.data-bs-target]="'#collapse' + data.id"
+          [pTooltip]="data.label"
+          aria-expanded="false"
+          aria-controls="'collapse' + data.id"
+          class="item-container"
+        >
+        <div>
+          <span class="material-symbols-outlined">{{ data.icon }}</span>
+          <span class="description">{{ data.label }}</span>
+          <span class="short-description">{{ data.char }}</span>
+        </div>
+          <span *ngIf="data.items != null" class="material-symbols-outlined down">keyboard_arrow_down</span>
+          
+        </div>
+        <div [id]="'collapse' + data.id" class="collapse">
+          <div *ngFor="let subItem of data.items" class="sub-menu__item" [routerLink]="[subItem.routeLink]">
+            <span>{{ subItem.label }}</span>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+</div>

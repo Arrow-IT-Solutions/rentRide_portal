@@ -1,0 +1,39 @@
+<div class="header">
+
+  <div class="header__container">
+    <div class="company-name">
+      POS System
+      <span class="branch-name">Branch Name</span>
+    </div>
+    <div class="header__tools">
+      <div class="search__item">
+        <span class="p-input-icon-left">
+          <i class="pi pi-search"></i>
+          <input
+            class="search-field"
+            type="text"
+            pInputText
+            placeholder="Search Products..."
+          />
+        </span>
+      </div>
+      <span class="material-symbols-outlined"
+        >barcode</span>
+      <span class="material-symbols-outlined"
+        >refresh</span>
+    </div>
+    <div class="profile">
+      <div class="cart-container">
+        <span class="material-symbols-outlined cart">shopping_cart</span>
+        <span class="counter">5</span>
+      </div>
+      <span class="material-symbols-outlined">language</span>
+      <div class="profile__image">
+        <span class="material-symbols-outlined fill">account_circle</span>
+        <span class="registered-user">{{
+          userService.currentUser.userName
+        }}</span>
+      </div>
+    </div>
+  </div>
+</div>
